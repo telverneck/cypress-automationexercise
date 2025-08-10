@@ -6,13 +6,13 @@ describe('Login', () => {
         cy.fixture('users').as('usersData');
     });
 
-    it('Deve realizar login com sucesso', function() {
+    it('Should login', function() {
         HomePage.visit();
         HomePage.clickSignupLogin();
         LoginPage.login(this.usersData.validUser.email, this.usersData.validUser.password);
         cy.contains('Logged in as').should('be.visible');
     });
-    it('Deve exibir mensagem de erro ao tentar login com credenciais inválidas', function() {
+    it('Should check wrong credentials error', function() {
         HomePage.visit();
         HomePage.clickSignupLogin();
         LoginPage.login(this.usersData.validUser.email + 'invalid', this.usersData.validUser.password + 'invalid');
