@@ -1,6 +1,6 @@
 describe('Home Page', () => {
     it('Should Load Home Page', () => {
         cy.visit('/');
-        cy.contains('Automation Exercise').should('be.visible');
+        cy.contains('AutomationExercise').should('be.visible');
     });
 });
