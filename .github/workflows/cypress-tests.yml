@@ -1,36 +1,38 @@
-name: Cypress Tests
+name: Cypress Tests & Report
+
 on:
   push:
-    branches: [main, master]
+    branches:
+      - main
   pull_request:
-    branches: [main, master]
 
 jobs:
-  cypress-run:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout do repositório
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🔧 Configurar Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: "18" # ou a versão que preferir
 
-      - name: 📦 Install dependencies
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      - name: 🧪 Run Cypress Tests
-        run: |
-          npx cypress run --browser chrome --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=false,json=true
-          npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json
-          npx marge cypress/reports/report.json --reportDir cypress/reports/html
+      - name: Run Cypress tests
+        run: npm run test:run
 
-      - name: 📤 Publish Report on GitHub Pages
+      - name: Merge mochawesome reports
+        run: node mergeReports.js
+
+      - name: Generate HTML report
+        run: npm run test:html
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./cypress/reports/html
-      - name: Listar arquivos do relatório
-        run: ls -lR cypress/reports/html

@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2025-08-10T03:03:09.221Z",
-    "end": "2025-08-10T03:03:18.681Z",
-    "duration": 9460,
+    "start": "2025-08-10T03:26:45.171Z",
+    "end": "2025-08-10T03:26:54.418Z",
+    "duration": 9247,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "61784dd1-347b-41e8-8889-caacd34a12a8",
+      "uuid": "c6538f61-4fa1-48f3-a34b-28bd727281a6",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\login.cy.js",
       "file": "cypress\\e2e\\tests\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "08ca9596-4e70-476c-bd26-522effb04cc7",
+          "uuid": "ae1969b3-b4ec-4382-b116-4d64e518c654",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should login",
               "fullTitle": "Login Should login",
               "timedOut": null,
-              "duration": 5777,
+              "duration": 5501,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "_HomePage.default.visit();\n_HomePage.default.clickSignupLogin();\n_LoginPage.default.login(this.usersData.validUser.email, this.usersData.validUser.password);\ncy.contains('Logged in as').should('be.visible');",
               "err": {},
-              "uuid": "f04945cd-d31f-4e38-a39b-b1f717e309ff",
-              "parentUUID": "08ca9596-4e70-476c-bd26-522effb04cc7",
+              "uuid": "537f4bb6-6ab3-4b2c-8571-65a8bc040a75",
+              "parentUUID": "ae1969b3-b4ec-4382-b116-4d64e518c654",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Should check wrong credentials error",
               "fullTitle": "Login Should check wrong credentials error",
               "timedOut": null,
-              "duration": 3563,
+              "duration": 3601,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "_HomePage.default.visit();\n_HomePage.default.clickSignupLogin();\n_LoginPage.default.login(this.usersData.validUser.email + 'invalid', this.usersData.validUser.password + 'invalid');\n_LoginPage.default.checkLoginError();",
               "err": {},
-              "uuid": "77af2550-81a6-49e9-9ca8-a1937e6d91c5",
-              "parentUUID": "08ca9596-4e70-476c-bd26-522effb04cc7",
+              "uuid": "0f2c1ea6-bed4-433b-a8ec-ce2422249dc5",
+              "parentUUID": "ae1969b3-b4ec-4382-b116-4d64e518c654",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f04945cd-d31f-4e38-a39b-b1f717e309ff",
-            "77af2550-81a6-49e9-9ca8-a1937e6d91c5"
+            "537f4bb6-6ab3-4b2c-8571-65a8bc040a75",
+            "0f2c1ea6-bed4-433b-a8ec-ce2422249dc5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9340,
+          "duration": 9102,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

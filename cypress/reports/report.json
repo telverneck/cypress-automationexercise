@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-10T03:26:39.487Z",
+    "end": "2025-08-10T03:26:54.418Z",
+    "duration": 12798,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "587102e7-9672-429b-b1a1-e34d913b1aa9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\home.cy.js",
+      "file": "cypress\\e2e\\tests\\home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9371dcbb-2bfe-43a1-870b-6ce9f882c754",
+          "title": "Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Load Home Page",
+              "fullTitle": "Home Page Should Load Home Page",
+              "timedOut": null,
+              "duration": 3495,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('AutomationExercise').should('be.visible');",
+              "err": {},
+              "uuid": "0493bacf-541c-40fe-8bde-dd0dc00e0130",
+              "parentUUID": "9371dcbb-2bfe-43a1-870b-6ce9f882c754",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0493bacf-541c-40fe-8bde-dd0dc00e0130"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3495,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c6538f61-4fa1-48f3-a34b-28bd727281a6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\login.cy.js",
+      "file": "cypress\\e2e\\tests\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae1969b3-b4ec-4382-b116-4d64e518c654",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login",
+              "fullTitle": "Login Should login",
+              "timedOut": null,
+              "duration": 5501,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.visit();\n_HomePage.default.clickSignupLogin();\n_LoginPage.default.login(this.usersData.validUser.email, this.usersData.validUser.password);\ncy.contains('Logged in as').should('be.visible');",
+              "err": {},
+              "uuid": "537f4bb6-6ab3-4b2c-8571-65a8bc040a75",
+              "parentUUID": "ae1969b3-b4ec-4382-b116-4d64e518c654",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check wrong credentials error",
+              "fullTitle": "Login Should check wrong credentials error",
+              "timedOut": null,
+              "duration": 3601,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.visit();\n_HomePage.default.clickSignupLogin();\n_LoginPage.default.login(this.usersData.validUser.email + 'invalid', this.usersData.validUser.password + 'invalid');\n_LoginPage.default.checkLoginError();",
+              "err": {},
+              "uuid": "0f2c1ea6-bed4-433b-a8ec-ce2422249dc5",
+              "parentUUID": "ae1969b3-b4ec-4382-b116-4d64e518c654",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "537f4bb6-6ab3-4b2c-8571-65a8bc040a75",
+            "0f2c1ea6-bed4-433b-a8ec-ce2422249dc5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9102,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
