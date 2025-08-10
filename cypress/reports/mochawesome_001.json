@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-10T03:03:09.221Z",
+    "end": "2025-08-10T03:03:18.681Z",
+    "duration": 9460,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61784dd1-347b-41e8-8889-caacd34a12a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\login.cy.js",
+      "file": "cypress\\e2e\\tests\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08ca9596-4e70-476c-bd26-522effb04cc7",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login",
+              "fullTitle": "Login Should login",
+              "timedOut": null,
+              "duration": 5777,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.visit();\n_HomePage.default.clickSignupLogin();\n_LoginPage.default.login(this.usersData.validUser.email, this.usersData.validUser.password);\ncy.contains('Logged in as').should('be.visible');",
+              "err": {},
+              "uuid": "f04945cd-d31f-4e38-a39b-b1f717e309ff",
+              "parentUUID": "08ca9596-4e70-476c-bd26-522effb04cc7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check wrong credentials error",
+              "fullTitle": "Login Should check wrong credentials error",
+              "timedOut": null,
+              "duration": 3563,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.visit();\n_HomePage.default.clickSignupLogin();\n_LoginPage.default.login(this.usersData.validUser.email + 'invalid', this.usersData.validUser.password + 'invalid');\n_LoginPage.default.checkLoginError();",
+              "err": {},
+              "uuid": "77af2550-81a6-49e9-9ca8-a1937e6d91c5",
+              "parentUUID": "08ca9596-4e70-476c-bd26-522effb04cc7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f04945cd-d31f-4e38-a39b-b1f717e309ff",
+            "77af2550-81a6-49e9-9ca8-a1937e6d91c5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9340,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
